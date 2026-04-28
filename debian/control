@@ -1,15 +1,38 @@
-Source: template-repository
-Section: unknown
-Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Source: libvisual-plugins
+Section: sound
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: debhelper-compat (= 13),
+               autopoint,
+               bison,
+               libasound2-dev [linux-any],
+               libgl-dev,
+               libglu1-mesa-dev,
+               libgtk-3-dev,
+               libgstreamer1.0-dev,
+               libjack-dev,
+               libvisual-0.4-dev (>= 0.4.2),
+               libx11-dev,
+               libxxf86vm-dev,
+               mesa-common-dev,
+               portaudio19-dev
+Standards-Version: 4.7.3
+Homepage: http://libvisual.org
+Vcs-Browser: https://salsa.debian.org/debian/libvisual-plugins
+Vcs-Git: https://salsa.debian.org/debian/libvisual-plugins.git
 
-Package: template-repository
+Package: libvisual-0.4-plugins
 Architecture: any
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: audio visualization framework plugins
+ Libvisual is a generic visualization framework that allows applications
+ to easily access and manage visualization plugins.
+ .
+ Audio visualization is the process of making pretty moving images that
+ are correlated in some way to the audio currently being played by a media
+ player. Most audio visualization is tied to a specific application or media
+ player, making it difficult to share code. Libvisual allows applications
+ to use existing visualization plugins written for the libvisual framework.
+ .
+ This package provides plugins for the libvisual audio visualization
+ framework.
