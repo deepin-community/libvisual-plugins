@@ -1,0 +1,6 @@
+libvisual-plugins
+-----------------
+
+The upstream tarball was modified to remove the non-free G-Force plugin.
+
+ -- David Schleef <ds@schleef.org>  Thu, 08 Sep 2005 19:25:56 -0700
